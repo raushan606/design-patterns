@@ -1,17 +1,29 @@
 package com.raushan;
 
+import java.util.Arrays;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+    
+        String[] result = divideString("abcdefghij", 3, 'x');
+        System.out.println("The divided string is: " + Arrays.toString(result));
+    }
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        public static String[] divideString(String s, int k, char fill) {
+
+        while (s.length() % k != 0) {
+            s += fill + "";
         }
+
+        String[] res = new String[s.length() / k];
+        int j = 0;
+        for (int i = 0; i < s.length(); i += k) {
+            res[j++] = s.substring(i, i + k);
+        }
+        return res;
     }
 }
