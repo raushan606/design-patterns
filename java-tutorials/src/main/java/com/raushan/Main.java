@@ -19,7 +19,7 @@ public class Main {
     Box<Float> floatBox = new Box<>();
     floatBox.set(10.5f);
     floatBox.inspect(5);
-    floatBox.inspect("u");
+    // floatBox.inspect("u");  // Comment out - String is not a Number
     System.out.println("Integer Value : " + integerBox.get());
 
     Box<String> stringBox = new Box<>();
