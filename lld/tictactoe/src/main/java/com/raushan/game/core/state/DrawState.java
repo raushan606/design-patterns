@@ -1,5 +1,6 @@
 package com.raushan.game.core.state;
 
+import com.raushan.game.core.Game;
 import com.raushan.game.core.Player;
 import com.raushan.game.exception.InvalidMoveException;
 

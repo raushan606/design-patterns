@@ -1,8 +1,10 @@
 package com.raushan.game.core.observer;
 
+import com.raushan.game.core.Game;
+
 import java.util.List;
 
-abstract class GameSubject {
+public abstract class GameSubject {
     private final List<GameObserver> observers = new java.util.ArrayList<>();
 
     public void addObserver(GameObserver observer) {
