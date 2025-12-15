@@ -19,8 +19,9 @@
     
     <modules>
         <module>high-level-design</module>
-        <module>low-level-design</module>
+        <module>design-patterns</module>
         <module>java-tutorials</module>
+        <module>lld</module>
     </modules>
 
     <dependencies>
