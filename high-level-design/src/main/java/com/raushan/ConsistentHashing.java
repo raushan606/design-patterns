@@ -11,7 +11,7 @@ import java.util.TreeMap;
 
 public class ConsistentHashing {
     private final int numberOfReplicas; // No. of VN per server
-    private final TreeMap<Long, String> ring; // Hash ring storing VN
+    private TreeMap<Long, String> ring; // Hash ring storing VN
     private final Set<String> servers; // Set of physical servers
 
     public ConsistentHashing(int numberOfReplicas, List<String> servers) {
@@ -72,20 +72,3 @@ public class ConsistentHashing {
 }
 
 
-public class Main {
-    public static void main(String[] args) {
-        List<String> servers = Arrays.asList("S0", "S1", "S2", "S3", "S4", "S5");
-        var ch = new ConsistentHashing(3, servers);
-        // Step 2: Assign requests (keys) to servers
-        System.out.println("UserA is assigned to: " + ch.getServer("UserA"));
-        System.out.println("UserB is assigned to: " + ch.getServer("UserB"));
-
-        // Step 3: Add a new server dynamically
-        ch.addServer("S6");
-        System.out.println("UserA is now assigned to: " + ch.getServer("UserA"));
-
-        // Step 4: Remove a server dynamically
-        ch.removeServer("S2");
-        System.out.println("UserB is now assigned to: " + ch.getServer("UserB"));
-    }
-}
