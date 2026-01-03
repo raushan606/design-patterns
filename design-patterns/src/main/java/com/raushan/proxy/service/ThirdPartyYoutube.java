@@ -22,6 +22,6 @@ public class ThirdPartyYoutube implements ThirdPartyYoutubeLib{
 
     @Override
     public void downloadVideo(String videoId) {
-        return null;
+        System.out.println("Downloading video:");
     }
 }
