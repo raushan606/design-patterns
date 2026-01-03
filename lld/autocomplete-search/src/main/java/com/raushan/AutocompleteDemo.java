@@ -1,6 +1,5 @@
 package com.raushan;
 
-
 import com.raushan.builder.AutocompleteSystemBuilder;
 import com.raushan.strategy.AlphabeticalRanking;
 import com.raushan.strategy.FrequencyBasedRanking;
